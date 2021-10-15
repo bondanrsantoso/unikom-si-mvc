@@ -1,0 +1,13 @@
+Options -Multiviews
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+# In the line below, ^(.*)$ is a regular expression
+# The meaning of each symbol is as follwos: 
+#  - " ^ "  (caret) means it will look up only from the start of the line
+#  - " (.*) " means it will capture everything that matches with '.*' expression and place it in $1
+#  -  " . " (dot) means it will match with everything except line break
+#  -  " * " (asterisk) means any length of string will match the expression
+#  - " $ " means it will match the condition until the end of the line
+RewriteRule ^(.*)$ index.php?url=$1 [L]
