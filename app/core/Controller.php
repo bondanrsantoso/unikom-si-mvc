@@ -4,9 +4,8 @@
 
 class Controller
 {
-	// TODO: Do Controller Stuff here
-	public function __construct()
+	public function view($view, $data = [])
 	{
-		echo "Controller is now instantiated";
+		require_once "../app/views/${view}.php";
 	}
 }
