@@ -19,7 +19,12 @@ abstract class Model
 			PDO::ATTR_PERSISTENT => true,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 		];
-		$this->db = new PDO($dbURI, $this->username, $this->password, $opt);
+
+		try {
+			$this->db = new PDO($dbURI, $this->username, $this->password, $opt);
+		} catch (Exception $e) {
+			echo $e->getMessage();
+		}
 	}
 
 	function prepareQuery(string $query)
