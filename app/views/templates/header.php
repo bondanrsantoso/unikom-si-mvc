@@ -13,11 +13,11 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
 			<a href="#" class="navbar-brand">Pemrograman Web MVC</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<div class="collapse navbar-collapse" id="collapsedNavbar">
+				<ul class=" navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a href="<?php echo BASEURL ?>Home/index" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="<?php echo BASEURL ?>About/page" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="<?php echo BASEURL ?>Mahasiswa" class="nav-link">Mahasiswa</a></li>
