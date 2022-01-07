@@ -6,6 +6,7 @@ class MahasiswaModel extends Model
 	public function getAllData()
 	{
 		$table = $this->table;
-		return $this->runStatement("SELECT * FROM $table");
+		$this->prepareQuery("SELECT * FROM $table");
+		return $this->fetch();
 	}
 }
