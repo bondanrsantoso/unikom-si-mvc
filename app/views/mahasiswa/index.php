@@ -14,8 +14,8 @@
 			<?php foreach ($data["allMahasiswa"] as $mhs) { ?>
 				<!-- This will loop all items in $data["allMahasiswa"] array -->
 				<tr>
-					<td><?= $mhs["id"] ?> </td>
-					<td><?= $mhs["nama"] ?></td>
+					<td><?= $mhs["id"] ?></td>
+					<td><a href="<?= BASEURL ?>Mahasiswa/detail/<?= $mhs["id"] ?>"><?= $mhs["nama"] ?></a></td>
 					<td><?= $mhs["email"] ?></td>
 					<td><?= $mhs["jurusan"] ?></td>
 					<td><?= $mhs["alamat"] ?></td>
