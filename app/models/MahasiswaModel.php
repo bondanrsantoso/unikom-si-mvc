@@ -18,4 +18,19 @@ class MahasiswaModel extends Model
 
 		return $this->fetchOne();
 	}
+
+	public function addOne(string $nama, string $jurusan, string $email, string $alamat)
+	{
+		$table = $this->table;
+		$this->prepareQuery("INSERT INTO $table (nama, jurusan, email, alamat) VALUES (?, ?, ?, ?)");
+
+		$values = [$nama, $jurusan, $email, $alamat];
+
+		$i = 1;
+		foreach ($values as $value) {
+			$this->bind($i++, $value);
+		}
+
+		$this->execute();
+	}
 }
